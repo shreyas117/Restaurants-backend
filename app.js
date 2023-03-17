@@ -21,6 +21,7 @@ app.use("/submitReview", require("./routes/submitReview"));
 app.use("/editRest", require("./routes/editRest"));
 app.use("/placeOrder", require("./routes/placeOrder"));
 app.use("/showMyOrders", require("./routes/showMyOrders"));
+app.use("/getRestsByName", require("./routes/getRestsByName"));
 
 app.use("/", (req, res) => {
   mongoose.connect(url, async function (err, db) {

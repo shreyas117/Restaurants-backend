@@ -29,6 +29,12 @@ router.post("/", urlencodedParser, (req, res) => {
           info: req.query.info,
           menu: req.body,
         },
+      },
+      function (err, data) {
+        if (err) {
+          res.send(err);
+        }
+        res.send(200, { result: "Menu changes made successfully!" });
       }
     );
   });
